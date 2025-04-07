@@ -1,38 +1,49 @@
 .day-card {
-  animation: fadeIn 0.25s ease-in forwards;
-  padding: 10px;
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.3s ease-in-out forwards;
   opacity: 0;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  &.today {
+    background-color: #e8f5e9;
+    border: 2px solid #43a047;
+  }
+
+  &.past {
+    background-color: #f5f5f5;
+    color: #999;
+    border: 1px solid #ccc;
+  }
 }
 
-.day-number {
-  font-size: 1.5rem;
+.day {
+  font-size: 1.75rem;
   font-weight: bold;
+  color: #424242;
 }
 
 .day-name {
   font-size: 1rem;
-  color: #666;
-}
-
-.today {
-  background-color: #a5ffa8;
-  border: 2px solid #388e3c;
-}
-
-.past {
-  background-color: #e0e0e0;
-  color: #b0b0b0;
-  border: 1px solid #ccc;
+  color: #757575;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
